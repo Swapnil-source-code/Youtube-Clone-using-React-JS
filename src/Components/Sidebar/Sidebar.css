@@ -54,6 +54,15 @@
 }
 
 
+/* Media Query for small screen */
+
+@media (max-width:900px) {
+  .sidebar{
+    display: none;
+  }
+}
+
+
 
 
 
