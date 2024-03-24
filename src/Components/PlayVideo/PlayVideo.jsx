@@ -55,7 +55,7 @@ const PlayVideo = ({ videoId }) => {
             <span><img src={save} alt="" /> Save</span>
           </div>
         </div>
-        <hr />
+      
         <div className="publisher">
           <img src={channelData?channelData.snippet.thumbnails.default.url:""} alt="" />
           <div>
@@ -65,7 +65,9 @@ const PlayVideo = ({ videoId }) => {
           <button>Subscribe</button>
         </div>
         <div className="vid-description">
-        <p>{apiData?apiData.snippet.description.slice(0,250):"Description Here"}</p>
+        <div className="description">
+          <p>{apiData ? apiData.snippet.description.slice(0, 250) : "Description Here"}</p>
+        </div>
         <hr />
         <h4>{apiData ? value_converter(apiData.statistics.commentCount) : "102"} Comments</h4>
         {commentData.map((item,index) => {
